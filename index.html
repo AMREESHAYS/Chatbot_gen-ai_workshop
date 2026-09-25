@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amr Shop Chatbot</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="order-panel">
+        <div class="brand-block">
+          <p class="eyebrow">Amr shop</p>
+          <h1>Bella</h1>
+        </div>
+
+        <div class="info-box">
+          <h2>Store info</h2>
+          <p><strong>Hours:</strong> 11:00 AM – 9:00 PM</p>
+          <p><strong>Location:</strong> Jalandhar</p>
+          <p><strong>Service:</strong> Dine-in only</p>
+          <p><strong>Promo:</strong> First-time order 10% off</p>
+        </div>
+
+        <div class="info-box order-box">
+          <h2>Current order</h2>
+          <ul id="orderList" class="order-list">
+            <li class="empty">Your cart is empty.</li>
+          </ul>
+          <div class="total-row">
+            <span>Total</span>
+            <strong id="totalPrice">₹0</strong>
+          </div>
+        </div>
+      </aside>
+
+      <main class="chat-panel">
+        <div class="chat-header">
+          <div>
+            <p class="eyebrow">Friendly virtual assistant</p>
+            <h2>Ask Bella</h2>
+          </div>
+        </div>
+
+        <div id="chatWindow" class="chat-window" aria-live="polite"></div>
+
+        <form id="chatForm" class="chat-form">
+          <input
+            id="userInput"
+            type="text"
+            placeholder="Ask about the menu or place an order..."
+            autocomplete="off"
+            aria-label="Type your message"
+          />
+          <button type="submit">Send</button>
+        </form>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
